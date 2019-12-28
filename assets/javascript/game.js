@@ -1,28 +1,64 @@
-var words = ["Jupitor", "Nebula", "Cosmic", "Centauri"];
 
-var word = words[Math.floor(Math.random()*words.length)];
+// words to be guessed
+var words = ["Jupiter", "Nebula", "Cosmic", "Centauri"];
+
+// randomizes the words that are displayed to guess
+var answers = words[Math.floor(Math.random()*words.length)];
+
 
 var answers = [];
-for (var i = 0; i < word.length; i++) {
+for (var i = 0; i < words.length; i++) {
     answers[i] = "_";
 }
 
-// var remaining = word.length; set to 10
 
-//     for (var l = 0; l < word.length; l++) {
-//     if (word[l] === guess) {
-//         answers[l] = guess;
-//         remaining--;
-//     }
-// }           
+// takes in which keys were pressed, and how many guesses they have left, as well as 
+// provides an input area for guessed letters
+var el;
 
-document.querySelector("#currentword").innerHTML=word
+function charCount(e) {
+    var textEntered, charDisplay, counter, lastkey;
+    textEntered = document.getElementById('spaces').nodeValue;
+    charDisplay = document.getElementById('');
+    lastkey.textContent = 'You have' + counter + 'guesses left'
+    counter = (10 - (textEntered.length));
+    charDisplay.textContent = counter;
 
-**underscores for words letters, and guessed letters in a document on key up function, (put everything in there)
+    lastkey =Document.getElementById('lastkey');
+    lastkey.textContect = 'Previous Guesses'+ e.keyCode
+    
+    el.addEventListener('keypress', charCount, false);
+}
 
-// letters are set as variables  XXXXX
+// displays the current word
+document.querySelector("#words").innerHTML=word
 
-// there is a word to be guessed, represented by empty spaces XXXXX
+
+// areas of extreme need of help:
+// putting _ _ _ in place
+// attaching words to _ 
+// showing guesses # left and showing previously guessed letters
+
+
+// if (answers = words) 
+//  return true
+// no backspaces or returns
+
+
+// // IF  a player guesses a letter, it is either revealed in the _ space, 
+// // ELSE it goes into the wrong guesses square
+
+
+
+
+
+
+
+// **underscores for words letters, and guessed letters in a document on key up function, (put everything in there)
+
+
+// make __ spaces on page that can be filled
+
 
 // you get 10 chances to guess letters that are in the word  
 
@@ -36,4 +72,4 @@ document.querySelector("#currentword").innerHTML=word
 
 // if you dont guess all the letters before you run out of guesses, you lose
 
-// reset button
+
