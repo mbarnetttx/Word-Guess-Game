@@ -1,9 +1,11 @@
-.lastkey {
-    width: 300px;
-    height: 200px;
+body {
+    background-image: url('https://cdn.vox-cdn.com/thumbor/YrgFPVW00illpL39yI0S34lnZWY=/0x0:2224x1668/1570x883/filters:focal(0x0:2224x1668):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/45811108/hs-2014-27-a-print.0.0.jpg');
+    background-size: cover;
+    height: 100%;
 }
 
-.counter {
-    width: 100px;
-    height: 100px;
+.jumbotron {
+    height: 100%;
+    width: 400px;
+    margin: auto;
 }

@@ -9,7 +9,16 @@ var answers = words[Math.floor(Math.random()*words.length)];
 var answers = [];
 for (var i = 0; i < words.length; i++) {
     answers[i] = "_";
+    
+    answers = document.getElementById('spaces').nodeValue;
+    
 }
+
+for (var i =0; i < numBlanks i++){
+    blankSpaces.push("_");
+}
+//Ceate function - document.onload
+
 
 
 // takes in which keys were pressed, and how many guesses they have left, as well as 
@@ -17,15 +26,14 @@ for (var i = 0; i < words.length; i++) {
 var el;
 
 function charCount(e) {
-    var textEntered, charDisplay, counter, lastkey;
-    textEntered = document.getElementById('spaces').nodeValue;
-    charDisplay = document.getElementById('');
-    lastkey.textContent = 'You have' + counter + 'guesses left'
-    counter = (10 - (textEntered.length));
-    charDisplay.textContent = counter;
+    var  triesCounter, lastkey, charDisplay, textContent;
+   
+    lastkey.textContent = 'You have' + triesCounter + 'guesses left'
+    triesCounter = (10 - (textEntered.length));
+    charDisplay.textContent = triesCounter;
 
     lastkey =Document.getElementById('lastkey');
-    lastkey.textContect = 'Previous Guesses'+ e.keyCode
+    lastkey.textContent = 'Previous Guesses'+ e.keyCode
     
     el.addEventListener('keypress', charCount, false);
 }
